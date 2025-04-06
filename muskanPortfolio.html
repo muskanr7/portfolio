@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muskan Rochwani's Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Quicksand", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9fafb;
+        color: #222;
+        padding-left: 12vw;
+        padding-right: 12vw;
+      }
+      header {
+        background: linear-gradient(90deg, #3e3e3e, #3e3e3e);
+        color: #d1d1d3;
+        padding: 40px 20px;
+        text-align: center;
+        border-bottom: 2px solid #ffd6c2;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.2em;
+        font-weight: 600;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .content {
+        background-color: #3e3e3e;
+        border-radius: 12px;
+        padding: 30px;
+        margin: 30px 0;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      }
+      .intro {
+        margin: 20px 0;
+        font-size: 1.25em;
+        text-align: center;
+        color: #d1d1d3;
+      }
+      .image-boxes {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+      }
+      .image-box {
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        width: 90%;
+        text-align: center;
+        padding: 25px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .image-box h2 {
+        margin-bottom: 15px;
+        font-weight: 500;
+        color: #333;
+      }
+      .image-box img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: cover;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.4);
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 6px;
+        font-size: 1.2em;
+        transition: background 0.3s ease;
+      }
+      .nav-button:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .prev {
+        left: 10px;
+      }
+      .next {
+        right: 10px;
+      }
+      footer {
+        background: #3e3e3e;
+        color: #d1d1d3;
+        text-align: center;
+        padding: 16px;
+        font-size: 0.95em;
+        margin-top: 40px;
+      }
+      footer a {
+        color: #d1d1d3;
+        text-decoration: none;
+        margin: 0 12px;
+        transition: color 0.3s ease;
+      }
+      footer a:hover {
+        color: #d1d1d3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Hi! I am Muskan Rochwani</h1>
+    </header>
+
+    <div class="content">
+      <div class="intro">
+        <p>
+          I'm a design student at NIFT Hyderabad—welcome to my creative space
+          where design meets strategy.
+        </p>
+      </div>
+
+      <div class="image-boxes">
+        <div class="image-box" id="project1">
+          <button class="nav-button prev" onclick="prevImage('project1')">
+            &#10094;
+          </button>
+          <img id="img-project1" src="images/sog_1.PNG" alt="Project 1" />
+          <button class="nav-button next" onclick="nextImage('project1')">
+            &#10095;
+          </button>
+
+          <h2>Story of Golu</h2>
+        </div>
+        <div class="image-box" id="project2">
+          <button class="nav-button prev" onclick="prevImage('project2')">
+            &#10094;
+          </button>
+          <img id="img-project2" src="images/se_1.PNG" alt="Project 2" />
+          <button class="nav-button next" onclick="nextImage('project2')">
+            &#10095;
+          </button>
+
+          <h2>Stacked Essence</h2>
+        </div>
+        <div class="image-box" id="project3">
+          <button class="nav-button prev" onclick="prevImage('project3')">
+            &#10094;
+          </button>
+          <img id="img-project3" src="images/mm_1.PNG" alt="Project 3" />
+          <button class="nav-button next" onclick="nextImage('project3')">
+            &#10095;
+          </button>
+          <h2>Meadow muse</h2>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <h1>Let's Work Together</h1>
+      <a href="https://www.behance.net/muskanrochwani" target="_blank"
+        >Behance</a
+      >
+      <a
+        href="https://www.instagram.com/muskanr0_7/?igsh=amcxM3lka29uN3hw&utm_source=qr#"
+        target="_blank"
+        >Instagram</a
+      >
+      <a
+        href="https://www.linkedin.com/in/muskan-rochwani-856055268/"
+        target="_blank"
+        >LinkedIn</a
+      >
+      <a href="mailto:muskanr.work7@gmail.com" target="_blank">Mail</a>
+    </footer>
+
+    <script>
+      const images = {
+        project1: [
+          "images/sog_1.PNG",
+          "images/sog_2.PNG",
+          "images/sog_3.PNG",
+          "images/sog_4.PNG",
+          "images/sog_5.PNG",
+        ],
+        project2: [
+          "images/se_1.PNG",
+          "images/se_2.PNG",
+          "images/se_3.PNG",
+          "images/se_4.PNG",
+        ],
+        project3: [
+          "images/mm_1.PNG",
+          "images/mm_2.PNG",
+          "images/mm_3.PNG",
+          "images/mm_4.PNG",
+          "images/mm_5.PNG",
+        ],
+      };
+
+      let currentIndex = { project1: 0, project2: 0, project3: 0 };
+
+      function updateImage(project) {
+        document.getElementById(`img-${project}`).src =
+          images[project][currentIndex[project]];
+      }
+
+      function prevImage(project) {
+        currentIndex[project] =
+          (currentIndex[project] - 1 + images[project].length) %
+          images[project].length;
+        updateImage(project);
+      }
+
+      function nextImage(project) {
+        currentIndex[project] =
+          (currentIndex[project] + 1) % images[project].length;
+        updateImage(project);
+      }
+    </script>
+  </body>
+</html>
